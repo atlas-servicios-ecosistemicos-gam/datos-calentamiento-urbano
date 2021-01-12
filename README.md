@@ -10,7 +10,7 @@ Los comandos GDAL realizan las conversiones a Web Mercator (EPSG:3857) y WGS84 (
 cd gam
 
 # Temperatura superficial
-gdalwarp -t_srs EPSG:3857 -of vrt PROBABILIDAD_CONECTIVIDAD_BOSQUE_BRIPARIO.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ PROBABILIDAD_CONECTIVIDAD_BOSQUE_BRIPARIO_WEB.TIF
-del PROBABILIDAD_CONECTIVIDAD_BOSQUE_BRIPARIO.*
-gdalwarp -t_srs EPSG:4326 -of vrt PROBABILIDAD_CONECTIVIDAD_BOSQUE_BRIPARIO_WEB.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ PROBABILIDAD_CONECTIVIDAD_BOSQUE_BRIPARIO.TIF
+gdalwarp -t_srs EPSG:3857 -of vrt LST_GAM.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ LST_GAM_WEB.TIF
+del LST_GAM.*
+gdalwarp -t_srs EPSG:4326 -of vrt LST_GAM_WEB.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ LST_GAM.TIF
 ```
