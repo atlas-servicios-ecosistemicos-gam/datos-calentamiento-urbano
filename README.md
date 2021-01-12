@@ -13,4 +13,9 @@ cd gam
 gdalwarp -t_srs EPSG:3857 -of vrt LST_GAM.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ LST_GAM_WEB.TIF
 del LST_GAM.*
 gdalwarp -t_srs EPSG:4326 -of vrt LST_GAM_WEB.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ LST_GAM.TIF
+
+# Temperatura superficial de infraestructura gris
+gdalwarp -t_srs EPSG:3857 -of vrt LST_INFRAESTRUCTURA_GRIS_GAM.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ LST_INFRAESTRUCTURA_GRIS_GAM_WEB.TIF
+del LST_INFRAESTRUCTURA_GRIS_GAM.*
+gdalwarp -t_srs EPSG:4326 -of vrt LST_INFRAESTRUCTURA_GRIS_GAM_WEB.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ LST_INFRAESTRUCTURA_GRIS_GAM.TIF
 ```
