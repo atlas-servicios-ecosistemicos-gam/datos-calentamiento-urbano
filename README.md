@@ -23,4 +23,9 @@ gdalwarp -t_srs EPSG:4326 -of vrt LST_INFRAESTRUCTURA_GRIS_GAM_WEB.TIF /vsistdou
 gdalwarp -t_srs EPSG:3857 -of vrt NDVI_GAM.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ NDVI_GAM_WEB.TIF
 del NDVI_GAM.*
 gdalwarp -t_srs EPSG:4326 -of vrt NDVI_GAM_WEB.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ NDVI_GAM.TIF
+
+# Índice de construcción
+gdalwarp -t_srs EPSG:3857 -of vrt NBDI_GAM.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ NBDI_GAM_WEB.TIF
+del NBDI_GAM.*
+gdalwarp -t_srs EPSG:4326 -of vrt NBDI_GAM_WEB.TIF /vsistdout/ | gdal_translate -co compress=lzw  /vsistdin/ NBDI_GAM.TIF
 ```
